@@ -2,4 +2,4 @@
 
 Recibe la cadena
 
-$$ (0\|1)*\|ab* $$
+$$ (0|1)*|ab* $$

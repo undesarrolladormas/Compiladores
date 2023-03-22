@@ -12,6 +12,7 @@ public class Search
         AnsiConsole.Markup($"[yellow]Crawling[/] [blue]{url}[/] \n\n");
         try {
             string web = WebDownload.Download(url);
+            if(web == "N/A") return;
             Site site = new Site(web);
             site.GetLinks().ForEach(link => AnsiConsole.Markup($"[green]{link}[/] \n"));
         }
@@ -20,5 +21,10 @@ public class Search
             AnsiConsole.Markup($"[red]Error: {ex.Message} [/]");
         }
         
+    }
+
+    private static void DownloadAndSearch()
+    {
+
     }
 }

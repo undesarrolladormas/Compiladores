@@ -10,9 +10,9 @@ public static class WebDownload
             var content = response.Content.ReadAsStringAsync().Result;
             return content;
         }
-        catch(Exception ex)
+        catch(Exception)
         {
-            return ex.Message;
+            return "N/A";
         }
     }
 }
